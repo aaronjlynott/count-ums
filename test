@@ -1,0 +1,20 @@
+from um import count
+
+def main():
+    test_case()
+    test_word()
+    test_w_space()
+
+def test_case():
+    assert count('Um, thanks for the album') == 1
+    assert count('Um, thanks, um...') == 2
+
+def test_word():
+    assert count('yummy') == 0
+
+def test_w_space():
+    assert count('Hello um world') == 1
+    assert count('um?') == 1
+
+if __name__ == "__main__":
+    main()
